@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Person</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Add Person</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post">
+        <label>Person ID:</label>
+        <input name="person_id" value="{{ form.person_id }}" required>
+
+        <label>First Name:</label>
+        <input name="first_name" value="{{ form.first_name }}" required>
+
+        <label>Last Name (optional):</label>
+        <input name="last_name" value="{{ form.last_name }}">
+
+        <label>Location ID:</label>
+        <input name="location_id" value="{{ form.location_id }}" required>
+
+        <label>Tax ID (only if pilot):</label>
+        <input name="tax_id" value="{{ form.tax_id }}">
+
+        <label>Experience (only if pilot):</label>
+        <input name="experience" value="{{ form.experience }}">
+
+        <label>Miles (only if passenger):</label>
+        <input name="miles" value="{{ form.miles }}">
+
+        <label>Funds (only if passenger):</label>
+        <input name="funds" value="{{ form.funds }}">
+
+        <br><br>
+        <button type="submit">Add Person</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>

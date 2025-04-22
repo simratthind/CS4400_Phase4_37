@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Toggle Pilot License</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Grant or Revoke Pilot License</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post">
+        <label>Pilot ID:</label>
+        <input name="person_id" value="{{ form.person_id }}" required>
+
+        <label>License Type:</label>
+        <input name="license" value="{{ form.license }}" required>
+
+        <br><br>
+        <button type="submit">Toggle License</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>

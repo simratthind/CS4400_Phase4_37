@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Offer Flight</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input, select { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Offer Flight</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post">
+        <label>Flight ID:</label>
+        <input name="flight_id" value="{{ form.flight_id }}" required>
+
+        <label>Route ID:</label>
+        <input name="route_id" value="{{ form.route_id }}" required>
+
+        <label>Support Airline (optional):</label>
+        <input name="support_airline" value="{{ form.support_airline }}">
+
+        <label>Support Tail Number (optional):</label>
+        <input name="support_tail" value="{{ form.support_tail }}">
+
+        <label>Progress (0 or more):</label>
+        <input name="progress" value="{{ form.progress }}" required>
+
+        <label>Next Time (hh:mm:ss):</label>
+        <input name="next_time" value="{{ form.next_time }}" required>
+
+        <label>Cost:</label>
+        <input name="cost" value="{{ form.cost }}" required>
+
+        <br><br>
+        <button type="submit">Offer Flight</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>

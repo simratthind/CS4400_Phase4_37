@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Airplane</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input, select { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Add Airplane</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post">
+        <label>Airline ID:</label>
+        <input name="airline_id" value="{{ form.airline_id }}" required>
+
+        <label>Tail Number:</label>
+        <input name="tail_num" value="{{ form.tail_num }}" required>
+
+        <label>Seat Capacity:</label>
+        <input name="seat_cap" value="{{ form.seat_cap }}" required>
+
+        <label>Speed:</label>
+        <input name="speed" value="{{ form.speed }}" required>
+
+        <label>Location ID:</label>
+        <input name="location_id" value="{{ form.location_id }}" required>
+
+        <label>Plane Type:</label>
+        <select name="plane_type">
+            <option value="">--Choose--</option>
+            <option value="Boeing" {% if form.plane_type == 'Boeing' %}selected{% endif %}>Boeing</option>
+            <option value="Airbus" {% if form.plane_type == 'Airbus' %}selected{% endif %}>Airbus</option>
+            <option value="General" {% if form.plane_type == 'General' %}selected{% endif %}>General</option>
+        </select>
+
+        <label>Maintained (true/false):</label>
+        <input name="maintained" value="{{ form.maintained }}" required>
+
+        <label>Model (optional):</label>
+        <input name="model" value="{{ form.model }}">
+
+        <label>Neo (0 or 1):</label>
+        <input name="neo" value="{{ form.neo }}">
+        
+        <br><br>
+        <button type="submit">Add Airplane</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>
