@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recycle Crew</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Recycle Crew</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post">
+        <label>Flight ID (3-letter):</label>
+        <input name="flight_id" value="{{ form.flight_id or '' }}" required>
+
+        <label>Airport Name:</label>
+        <input name="airport_name" value="{{ form.airport_name or '' }}" required>
+
+        <label>City:</label>
+        <input name="city" value="{{ form.city or '' }}" required>
+
+        <label>State:</label>
+        <input name="state" value="{{ form.state or '' }}" required>
+
+        <label>Country (3-letter):</label>
+        <input name="country" value="{{ form.country or '' }}" required>
+
+        <label>Location ID:</label>
+        <input name="location_id" value="{{ form.location_id or '' }}" required>
+        
+        <br><br>
+        <button type="submit">Recycle Crew</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>
