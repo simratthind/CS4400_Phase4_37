@@ -4,6 +4,7 @@ from .airport import airport_bp
 from .person import person_bp
 from .license import license_bp
 from .flight import flight_bp
+from .views import views_bp
 
 def register_routes(app):
     app.register_blueprint(airplane_bp)
@@ -11,4 +12,5 @@ def register_routes(app):
     app.register_blueprint(person_bp)
     app.register_blueprint(license_bp)
     app.register_blueprint(flight_bp)
+    app.register_blueprint(views_bp)
 
