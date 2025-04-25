@@ -15,7 +15,7 @@ from .flights_on_the_ground import flights_on_the_ground_bp
 from .flightlanding import flightlanding_bp
 from .flighttakeoff import flighttakeoff_bp
 from .passengersboard import passengersboard_bp
-
+from .passengersdisembark import passengersdisembark_bp
 
 
 def register_routes(app):
@@ -35,6 +35,8 @@ def register_routes(app):
     app.register_blueprint(flightlanding_bp)
     app.register_blueprint(flighttakeoff_bp)
     app.register_blueprint(passengersboard_bp)
+    app.register_blueprint(passengersdisembark_bp)
+
 
     
 
