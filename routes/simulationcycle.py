@@ -5,6 +5,7 @@ simulationcycle_bp = Blueprint("simulationcycle", __name__)
 
 @simulationcycle_bp.route("/simulation_cycle", methods=["GET", "POST"])
 def simulation_cycle():
+    sim_success = None
     error_msg = None
     form_data = request.form if request.method == "POST" else {}
 
