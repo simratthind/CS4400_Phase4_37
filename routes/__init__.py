@@ -4,7 +4,7 @@ from .airport import airport_bp
 from .person import person_bp
 from .license import license_bp
 from .flight import flight_bp
-from .flights_in_the_air import views_bp
+from .flights_in_the_air import flights_in_the_air_bp
 from .people_in_the_air import people_in_the_air_bp
 from .people_on_the_ground import people_on_the_ground_bp
 from .route_summary import route_summary_bp
@@ -25,7 +25,7 @@ def register_routes(app):
     app.register_blueprint(people_on_the_ground_bp)
     app.register_blueprint(route_summary_bp)
     app.register_blueprint(alternative_airports_bp)
-    app.register_blueprint(views_bp)
+    app.register_blueprint(flights_in_the_air_bp)
     app.register_blueprint(crew_bp)
     app.register_blueprint(retire_bp)
     app.register_blueprint(flights_on_the_ground_bp)
