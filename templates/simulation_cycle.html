@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simulation Cycle</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        label { display: block; margin-top: 1em; }
+        input { width: 300px; padding: 0.5em; }
+        .error { color: red; margin-top: 1em; }
+    </style>
+</head>
+<body>
+    <h2>Simulation Cycle</h2>
+    {% if error %}<div class="error">{{ error }}</div>{% endif %}
+
+    <form method="post" action="/simulation_cycle">
+        <label>simulation_cycle()</label>
+        <p>This will run one step of the simulation cycle.</p>
+
+        <br><br>
+        <button type="submit">Next Step</button>
+    </form>
+
+    <br><a href="/">&larr; Back to Home</a>
+</body>
+</html>

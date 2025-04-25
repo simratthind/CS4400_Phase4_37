@@ -14,10 +14,10 @@
     {% if error %}<div class="error">{{ error }}</div>{% endif %}
 
     <form method="post">
-        <label>Flight ID (3-letter):</label>
+        <label>Flight ID:</label>
         <input name="flight_id" value="{{ form.flight_id or '' }}" required>
         <br><br>
-        <button type="submit">Recycle Crew</button>
+        <button type="submit">Recycle</button>
     </form>
 
     <br><a href="/">&larr; Back to Home</a>
