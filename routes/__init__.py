@@ -12,6 +12,7 @@ from .alternative_airports import alternative_airports_bp
 from .crew import crew_bp
 from .retire import retire_bp
 from .onground import onground_bp
+from .flightlanding import flightlanding_bp
 
 
 def register_routes(app):
@@ -29,4 +30,5 @@ def register_routes(app):
     app.register_blueprint(retire_bp)
     app.register_blueprint(onground_bp)
 
+    app.register_blueprint(flightlanding_bp)
 
