@@ -3,7 +3,7 @@ from db import cursor
 
 onground_bp = Blueprint("onground", __name__)
 
-@onground_bp.route("/flights_in_the_air")
+@onground_bp.route("/flights_on_the_ground")
 def flights_on_the_ground():
     cursor.execute("SELECT * FROM flights_on_the_ground")
     results = cursor.fetchall()
