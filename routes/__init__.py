@@ -9,6 +9,9 @@ from .people_in_the_air import people_in_the_air_bp
 from .people_on_the_ground import people_on_the_ground_bp
 from .route_summary import route_summary_bp
 from .alternative_airports import alternative_airports_bp
+from .crew import crew_bp
+from .retire import retire_bp
+from .onground import onground_bp
 
 
 def register_routes(app):
@@ -21,5 +24,9 @@ def register_routes(app):
     app.register_blueprint(people_on_the_ground_bp)
     app.register_blueprint(route_summary_bp)
     app.register_blueprint(alternative_airports_bp)
+    app.register_blueprint(views_bp)
+    app.register_blueprint(crew_bp)
+    app.register_blueprint(retire_bp)
+    app.register_blueprint(onground_bp)
 
 

@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request
 from db import cursor, db
 
-airplane_bp = Blueprint("retire", __name__)
+retire_bp = Blueprint("retire", __name__)
 
-@airplane_bp.route("/retire_flight", methods=["GET", "POST"])
+@retire_bp.route("/retire_flight", methods=["GET", "POST"])
 def retire_flight():
     error_msg = None
     form_data = request.form if request.method == "POST" else {}
