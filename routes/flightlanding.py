@@ -36,7 +36,7 @@ def flight_landing():
             cursor.close()
             conn.close()
 
-    return render_template('flight_landing_form.html', result=result, error=error)
+    return render_template('flight_landing.html', result=result, error=error)
 
 if __name__ == '__main__':
     app.run(debug=True)
