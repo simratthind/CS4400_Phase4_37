@@ -3,7 +3,7 @@ from db import cursor, db
 
 flightlanding_bp = Blueprint("flightlanding", __name__)
 
-@flightlanding.route("/flight_landing", methods=["GET", "POST"])
+@flightlanding_bp.route("/flight_landing", methods=["GET", "POST"])
 def flight_landing():
     error_msg = None
     data = {
