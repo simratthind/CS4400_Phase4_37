@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template
 from db import cursor
 
-views_bp = Blueprint("views", __name__)
+flights_in_the_air_bp = Blueprint("flights_in_the_air", __name__)
 
-@views_bp.route("/flights_in_the_air")
+@flights_in_the_air_bp.route("/flights_in_the_air")
 def flights_in_the_air():
     cursor.execute("SELECT * FROM flights_in_the_air")
     results = cursor.fetchall()
