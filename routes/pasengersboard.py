@@ -4,7 +4,7 @@ from db import cursor, db
 passengersboard_bp = Blueprint("passengersboard", __name__)
 
 @passengersboard_bp.route("/pass_board", methods=["GET", "POST"])
-def pass_board():
+def passengersboard():
     error_msg = None
     data = {
         "airline_id": "",
