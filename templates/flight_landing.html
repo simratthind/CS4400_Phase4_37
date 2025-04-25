@@ -8,18 +8,23 @@
         input { width: 300px; padding: 0.5em; }
         button { padding: 1em; background-color: #4CAF50; color: white; border: none; border-radius: 4px; }
         .error { color: red; margin-top: 1em; }
+        .result { color: green; margin-top: 1em; }
     </style>
 </head>
 <body>
     <h2>Flight Landing Procedure</h2>
+    
     {% if error %}
         <div class="error">{{ error }}</div>
     {% endif %}
 
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+
     <form method="post">
-        <!-- Input for Flight ID -->
         <label>Flight ID:</label>
-        <input name="flightID" value="{{ form.flightID or '' }}" required>
+        <input name="flightID" value="{{ request.form.flightID or '' }}" required>
 
         <br><br>
 
