@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People on the Ground</title>
+    <style>
+        body { font-family: Arial; padding: 2em; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { padding: 0.75em; border: 1px solid #ccc; text-align: left; }
+        th { background-color: #f0f0f0; }
+    </style>
+</head>
+<body>
+    <h2>People on the Ground</h2>
+    {% if rows %}
+        <table>
+            <thead>
+                <tr>
+                    {% for header in headers %}
+                        <th>{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr>
+                        {% for item in row %}
+                            <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+    <br><a href="/">← Back to Home</a>
+</body>
+</html>

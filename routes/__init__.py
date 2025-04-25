@@ -5,6 +5,11 @@ from .person import person_bp
 from .license import license_bp
 from .flight import flight_bp
 from .views import views_bp
+from .people_in_the_air import people_in_the_air_bp
+from .people_on_the_ground import people_on_the_ground_bp
+from .route_summary import route_summary_bp
+from .alternative_airports import alternative_airports_bp
+
 
 def register_routes(app):
     app.register_blueprint(airplane_bp)
@@ -12,5 +17,9 @@ def register_routes(app):
     app.register_blueprint(person_bp)
     app.register_blueprint(license_bp)
     app.register_blueprint(flight_bp)
-    app.register_blueprint(views_bp)
+    app.register_blueprint(people_in_the_air_bp)
+    app.register_blueprint(people_on_the_ground_bp)
+    app.register_blueprint(route_summary_bp)
+    app.register_blueprint(alternative_airports_bp)
+
 
