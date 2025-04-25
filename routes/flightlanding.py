@@ -3,16 +3,6 @@ import mysql.connector
 
 app = Flask(__name__)
 
-# MySQL connection setup
-def get_db_connection():
-    connection = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="devik2005",
-        database="flight_tracking"
-    )
-    return connection
-
 @app.route('/')
 def index():
     return render_template('index.html')  # Assuming index.html is your homepage.
