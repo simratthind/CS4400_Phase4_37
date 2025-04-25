@@ -26,6 +26,9 @@
         <label>Flight ID:</label>
         <input name="flightID" value="{{ request.form.flightID or '' }}" required>
 
+        <label>Pilot ID:</label>
+        <input name="person_id" value="{{ form.person_id }}" required>
+        
         <br><br>
 
         <button type="submit">Submit Assign Pilot</button>
