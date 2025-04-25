@@ -20,7 +20,8 @@ def recycle_crew():
             db.commit()
 
             # Check if airplane was actually inserted
-            cursor.execute("SELECT * FROM flight WHERE flightid = %s")
+            cursor.execute("SELECT * FROM flight WHERE flightid = %s", (flight_id,))
+
             if cursor.fetchone():
                 return render_template("index.html", success_msg="Successful crew recycled!")
             else:
