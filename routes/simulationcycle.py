@@ -10,6 +10,7 @@ def simulation_cycle():
     form_data = request.form if request.method == "POST" else {}
 
     if request.method == "POST":
+        print("Simulation cycle triggered.")
         try:
             cursor.callproc("simulation_cycle")
             db.commit()
